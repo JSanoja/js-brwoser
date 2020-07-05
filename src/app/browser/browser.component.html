@@ -1,0 +1,32 @@
+<img class="cover-background" [src]="cover" />
+<div class="container">
+  <mat-grid-list
+    cols="6"
+    rowHeight="9:16"
+    *ngIf="items && items.folders.length > 0"
+  >
+    <mat-grid-tile
+      *ngFor="let item of items.folders"
+      [style.backgroundImage]="sanitizeImage(getCoverFolder(item))"
+      (click)="selectFolder(item)"
+      ><mat-card>{{ item }}</mat-card></mat-grid-tile
+    >
+  </mat-grid-list>
+  <mat-grid-list
+    cols="6"
+    rowHeight="9:12"
+    *ngIf="items && items.videos.length > 0"
+  >
+    <mat-grid-tile *ngFor="let item of items.videos" (click)="playVideo(item)"
+      ><mat-card>{{ item }}</mat-card></mat-grid-tile
+    >
+  </mat-grid-list>
+  <mat-card *ngIf="isVideo">
+    <vg-player>
+      <video #media id="singleVideo" preload="auto" controls>
+        <source [src]="'/source/' + path" type="video/mp4" />
+      </video>
+    </vg-player>
+    {{ path }}</mat-card
+  >
+</div>

@@ -1,0 +1,10 @@
+{
+    "/api/browse": {
+        "target": "http://localhost:3000",
+        "secure": false
+    },
+    "/source": {
+        "target": "http://localhost:3000",
+        "secure": false
+    }
+}
