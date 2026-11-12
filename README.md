@@ -1,5 +1,10 @@
 # JsBrowser
 
+> [!WARNING]
+> **This project is deprecated and archived.** It was the Angular 8 web front end for `api-js-browser`, and both have been replaced by **[S-HUB](https://github.com/JSanoja/s-media-hub)**. S-HUB includes a new TV UI (Preact) and an Android TV app with a native player for Chromecast with Google TV.
+>
+> Don't use this code. Angular 8, TSLint, Protractor and `videogular2` are all unmaintained, and the backend this front end talks to (`api-js-browser`) is archived as well.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.24.
 
 ## Development server
